@@ -4,4 +4,6 @@
 # dist 发布目录
 /dist
 
+# 抹平系统差异文件
+.DS_Store
 

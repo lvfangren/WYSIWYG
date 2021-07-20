@@ -1,15 +1,21 @@
 const path = require('path')
-const { VueLoaderPlugin } = require('vue-loader')
+const {
+    VueLoaderPlugin
+} = require('vue-loader')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: "./src/main.js",
     output: {
         path: path.resolve(__dirname, '../dist'),
+        filename: 'bundle.js',
+    },
+    devServer: {
+        host: '0.0.0.0',
+        port: 8080,
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.m?js$/,
                 exclude: /node_modules/,
                 use: {
@@ -20,10 +26,19 @@ module.exports = {
                 }
             },
             {
+                test: /\.ts?$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'ts-loader',
+                    options: {
+                        appendTsSuffixTo: [/\.vue$/]
+                    }
+                }
+            },
+            {
                 test: /\.css$/,
                 exclude: /node_modules/,
-                use: [
-                    {
+                use: [{
                         loader: 'style-loader',
                     },
                     {
@@ -46,6 +61,15 @@ module.exports = {
                     },
                 }
             },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        esModule: false
+                    }
+                }
+            }
         ],
     },
     plugins: [
@@ -59,6 +83,6 @@ module.exports = {
         alias: {
             'vue$': 'vue/dist/vue.esm.js'
         },
-        extensions: ['*','.js', '.vue', '.json']
+        extensions: ['*', '.js', '.vue', '.json']
     },
 }
