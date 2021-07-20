@@ -8,11 +8,14 @@ module.exports = {
     entry: "./src/main.js",
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: 'bundle.js',
+        filename: '[name].[chunkhash].js'
     },
+    devtool: 'inline-source-map',
     devServer: {
         host: '0.0.0.0',
         port: 8080,
+        contentBase: './dist',
+        hot: true
     },
     module: {
         rules: [{
@@ -38,18 +41,10 @@ module.exports = {
             {
                 test: /\.css$/,
                 exclude: /node_modules/,
-                use: [{
-                        loader: 'style-loader',
-                    },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            importLoaders: 1,
-                        }
-                    },
-                    {
-                        loader: 'postcss-loader'
-                    }
+                use: [
+                    'style-loader',
+                    { loader: 'css-loader', options: { importLoaders: 1 } },
+                    'postcss-loader'
                 ],
             },
             {
@@ -67,6 +62,16 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         esModule: false
+                    }
+                }
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        context:'src',
+                        name: "font/[name].[ext]",
                     }
                 }
             }
