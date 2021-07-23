@@ -3,6 +3,7 @@ const {
     VueLoaderPlugin
 } = require('vue-loader');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
     entry: "./src/main.js",
@@ -67,6 +68,9 @@ module.exports = {
         ],
     },
     plugins: [
+        new ESLintPlugin({
+            extensions: ['.js', '.ts']
+        }),
         new VueLoaderPlugin(),
         new HTMLWebpackPlugin({
             template: './index.html',
@@ -80,3 +84,5 @@ module.exports = {
         extensions: ['*', '.js', '.vue', '.json']
     },
 }
+
+console.log(process.env,'llll');

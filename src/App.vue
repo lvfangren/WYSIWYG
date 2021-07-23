@@ -9,7 +9,8 @@
 export default {
     data() {
       return {
-        name: 'ca'
+        name: 'ca',
+        casca: "cas"
       }
     },
     created() {
