@@ -6,7 +6,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
-    entry: "./src/main.js",
+    entry: "./src/main.ts",
     module: {
         rules: [{
                 test: /\.m?js$/,
@@ -81,8 +81,7 @@ module.exports = {
         alias: {
             'vue$': 'vue/dist/vue.esm.js'
         },
-        extensions: ['*', '.js', '.vue', '.json']
+        extensions: ['*', '.js', '.ts', '.vue', '.json']
     },
 }
 
-console.log(process.env,'llll');

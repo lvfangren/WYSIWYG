@@ -1,4 +1,4 @@
-# vueDemo
+# WYSIWYG
 
 基于webpack5 + vue2X + ts的项目模版
 
@@ -25,7 +25,7 @@
 
 * [XXX](baidu.com)
 
-如果您的项目使用了这个项目模版完成，可以在issue或者直接pr提出，希望得到您的支持！
+如果您的项目使用了这个项目模版完成，可以在issue或者pr提出，希望得到您的支持！
 
 ## 其它
 
@@ -33,3 +33,18 @@
 
 关于vue3版本的需求，建议clone这个项目模版后可以使用[@vue/compat](https://v3.vuejs.org/guide/migration/migration-build.html#overview)完成项目vue3的支持
 
+本意是希望所见即所得
+
+## 参考
+
+[webpack文档](https://www.webpackjs.com/guides/)
+
+[vue-loader文档](https://vue-loader.vuejs.org/)
+
+[eslint文档](https://eslint.org/docs/user-guide/configuring/configuration-files#extending-configuration-files)
+
+[API接口](https://www.v2ex.com/p/7v9TEc53)
+
+### License
+
+MIT
