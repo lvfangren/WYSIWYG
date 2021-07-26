@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import App from './App1.vue';
+import App from './App.vue';
 import './css/test.css';
 import Test from './test';
 import { httpAxios } from './share/index';
