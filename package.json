@@ -19,9 +19,10 @@
   "license": "MIT",
   "description": "",
   "dependencies": {
-    "axios": "^0.21.1",
-    "precss": "^4.0.0",
-    "vue": "^2.6.14"
+    "axios": "0.21.1",
+    "normalize.css": "8.0.1",
+    "precss": "4.0.0",
+    "vue": "2.6.14"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",
