@@ -9,3 +9,8 @@
 body {
     font-family: 'Test font';
 }
+
+/* 开启UI测试 */
+html * {
+    outline: 1px solid blue;
+}
