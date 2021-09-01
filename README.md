@@ -6,6 +6,18 @@
 
 有些时候会对一些集成度高的工具产生些排斥，有些时候它反会让人觉得难以下手。
 
+## 为什么使用这个项目模版
+
+配置了CI/CD
+
+不需要你关心生产和开发环境的配置
+
+解决了潜在的项目优化问题（打包，编译，加载）
+
+处理了跨域问题（可以参见完整的demo）
+
+规范了一个前端项目的工作流，从开发到部署上线
+
 ## 使用
 当这个项目模版clone下来后
 
@@ -29,7 +41,7 @@
 
 ## 其它
 
-考虑到灵活度我没有配套安装vue-router等相关全家桶，我认为那是和你开发的项目需求有关，属于业务层面的需要，所以你可以自行配套安装使用。
+考虑到灵活度,没有配套安装vue-router等相关全家桶，我认为那是和你开发的项目需求有关，属于业务层面的需要，所以你可以自行配套安装使用。
 
 关于vue3版本的需求，建议clone这个项目模版后可以使用[@vue/compat](https://v3.vuejs.org/guide/migration/migration-build.html#overview)完成项目vue3的支持
 
@@ -44,6 +56,8 @@
 [eslint文档](https://eslint.org/docs/user-guide/configuring/configuration-files#extending-configuration-files)
 
 [API接口](https://www.v2ex.com/p/7v9TEc53)
+
+[github action 文档](https://docs.github.com/cn/actions)
 
 ### License
 
