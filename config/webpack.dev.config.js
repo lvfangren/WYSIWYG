@@ -4,8 +4,10 @@ const { merge } = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.base.config');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+const smp = new SpeedMeasurePlugin();
 
-exports.default = merge(baseWebpackConfig, {
+const webpackConfigs = merge(baseWebpackConfig, {
     mode: 'development',
     output: {
         path: path.resolve(__dirname, '../dist'),
@@ -35,4 +37,8 @@ exports.default = merge(baseWebpackConfig, {
         }),
         // new BundleAnalyzerPlugin(),
     ],
-})
+});
+
+// smp存在会导致报VueLoaderPlugin不存在相关配置的错误
+// exports.default = smp.wrap(webpackConfigs);
+exports.default = webpackConfigs;

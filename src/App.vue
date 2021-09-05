@@ -11,7 +11,7 @@
         main
       </main>
       <aside class="block-left">
-        aside        
+        aside
       </aside>
       <aside class="block-right">
         aside
@@ -25,23 +25,23 @@
 
 <script lang="ts">
 export default {
-  data() {
-    return {
-      name: "ca",
-      casca: "cas",
-    };
-  },
-  created() {
-    // @ts-ignore
-    this.$http.get("api/members/show.json?id=21").then((res: any) => {
-      console.log(res, "rerere");
-    });
-  },
-  methods: {
-    cc(a: string) {
-      return "csa";
+    data() {
+        return {
+            name: 'ca',
+            casca: 'cas',
+        };
     },
-  },
+    created() {
+        // @ts-ignore
+        this.$http.get('api/members/show.json?id=21').then((res: any) => {
+            console.log(res, 'rerere');
+        });
+    },
+    methods: {
+        cc(a: string) {
+            return 'cs';
+        },
+    },
 };
 </script>
 

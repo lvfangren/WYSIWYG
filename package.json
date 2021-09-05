@@ -6,7 +6,7 @@
     "dev": "webpack server --config config/webpack.dev.config.js",
     "build": "webpack --config config/webpack.prod.config.js",
     "lint": "eslint --fix --ext .ts,.vue src",
-    "lint:fix": "eslint --fix",
+    "lint:fix": "eslint --fix src/App.vue",
     "xx": "eslint src/App.vue",
     "prepare": "husky install"
   },
@@ -45,6 +45,8 @@
     "lint-staged": "^11.1.2",
     "postcss": "^8.3.5",
     "postcss-loader": "^6.1.1",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "speed-measure-webpack-plugin": "^1.5.0",
     "style-loader": "^3.1.0",
     "ts-loader": "^9.2.3",
     "typescript": "^4.3.5",

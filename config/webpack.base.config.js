@@ -1,9 +1,8 @@
 'use strict';
-const {
-    VueLoaderPlugin
-} = require('vue-loader');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 
 module.exports = {
     entry: "./src/main.ts",
@@ -76,6 +75,8 @@ module.exports = {
             template: './index.html',
             filename: './index.html'
         }),
+        // 进度条显示打包编译
+        new ProgressBarPlugin()
     ],
     resolve: {
         alias: {
@@ -83,5 +84,5 @@ module.exports = {
         },
         extensions: ['*', '.js', '.ts', '.vue', '.json']
     },
-}
+};
 
