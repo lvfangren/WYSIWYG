@@ -51,11 +51,11 @@ jobs:
       
       # 设定node环境，替换系统默认的node
       - name: Setup Node.js environment
-      - uses: actions/setup-node@v2.4.0
+        uses: actions/setup-node@v2.4.0
         with: 
           node-version: '14'
           cache: 'npm'
-      - run: |
+        run: |
           npm install
           npm run test
           
