@@ -71,5 +71,10 @@
       "eslint",
       "git add"
     ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
