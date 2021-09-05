@@ -55,7 +55,7 @@ jobs:
         with: 
           node-version: '14'
           cache: 'npm'
-        run: |
+      - run: |
           npm install
           npm run test
           
