@@ -6,6 +6,7 @@ const webpack = require('webpack');
 console.log(webpack, 'ssss');
 module.exports = {
     entry: "./src/main.ts",
+    // 替代了原来的cache-loader和dll插件
     cache: {
         type: 'filesystem',
         // 可选配置
@@ -105,7 +106,9 @@ module.exports = {
         alias: {
             'vue$': 'vue/dist/vue.esm.js'
         },
-        extensions: ['*', '.js', '.ts', '.vue', '.json']
+        extensions: ['*', '.js', '.ts', '.vue', '.json'],
+	// 项目不含npm link，减小解析工作量
+	symlinks: false
     },
 };
 
