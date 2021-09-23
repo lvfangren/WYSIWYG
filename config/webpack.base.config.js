@@ -72,8 +72,8 @@ module.exports = {
         }),
         new VueLoaderPlugin(),
         new HTMLWebpackPlugin({
-            template: './index.html',
-            filename: './index.html'
+            template: 'public/index.html',
+            filename: 'index.html'
         }),
         // 进度条显示打包编译
         new ProgressBarPlugin()

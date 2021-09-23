@@ -32,7 +32,7 @@ const webpackConfigs = merge(baseWebpackConfig, {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            template: './index.html',
+            template: './public/index.html',
             filename: './index.html'
         }),
         // new BundleAnalyzerPlugin(),
