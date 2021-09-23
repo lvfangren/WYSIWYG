@@ -2,10 +2,21 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
-const ProgressBarPlugin = require('progress-bar-webpack-plugin')
-
+const webpack = require('webpack');
+console.log(webpack, 'ssss');
 module.exports = {
     entry: "./src/main.ts",
+    cache: {
+        type: 'filesystem',
+        // 可选配置
+        buildDependencies: {
+            config: [__filename],  // 当构建依赖的config文件（通过 require 依赖）内容发生变化时，缓存失效
+        },
+    },
+    // 
+    experiments: {
+        topLevelAwait: true,
+    },
     module: {
         rules: [{
                 test: /\.m?js$/,
@@ -45,24 +56,22 @@ module.exports = {
                     },
                 }
             },
+            // 内置静态资源构建能力 —— Asset Modules
             {
-                test: /\.(png|svg|jpg|gif)$/,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        esModule: false
-                    }
-                }
+                test: /\.(png|jpg|svg|gif)$/,
+                type: 'asset/resource',
+                generator: {
+                    // [ext]前面自带"."
+                    filename: 'assets/[hash:8].[name][ext]',
+                },
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        context:'src',
-                        name: "font/[name].[ext]",
-                    }
-                }
+                type: 'asset/resource',
+                generator: {
+                    // [ext]前面自带"."
+                    filename: 'font/[hash:8].[name][ext]',
+                },
             }
         ],
     },
@@ -76,7 +85,21 @@ module.exports = {
             filename: 'index.html'
         }),
         // 进度条显示打包编译
-        new ProgressBarPlugin()
+        new webpack.ProgressPlugin({
+            activeModules: false,
+            entries: true,
+            handler(percentage, message, ...args) {
+              // custom logic
+              console.log('sssss',percentage,message,args);
+            },
+            modules: true,
+            modulesCount: 5000,
+            profile: false,
+            dependencies: true,
+            dependenciesCount: 10000,
+            percentBy: null,
+        })
+          
     ],
     resolve: {
         alias: {

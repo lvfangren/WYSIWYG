@@ -59,6 +59,7 @@
 
 [github action 文档](https://docs.github.com/cn/actions)
 
+[Webpack5 新特性业务落地实战](https://zhuanlan.zhihu.com/p/348612482)
 ### License
 
 MIT
