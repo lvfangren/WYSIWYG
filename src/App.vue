@@ -78,6 +78,11 @@ main {
   display: flex;
   height: 100%;
 }
+.content aside {
+  max-width: 200px;
+  overflow: hidden;
+  word-break: break-all;
+}
 .block-left,.block-right {
   flex: 0 1 200px;
 }

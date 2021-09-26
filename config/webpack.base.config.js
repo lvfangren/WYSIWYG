@@ -14,7 +14,7 @@ module.exports = {
             config: [__filename],  // 当构建依赖的config文件（通过 require 依赖）内容发生变化时，缓存失效
         },
     },
-    // 
+    // Support the Top Level Await Stage 3 proposal, it makes the module an async module when await is used on the top-level.
     experiments: {
         topLevelAwait: true,
     },
@@ -27,6 +27,16 @@ module.exports = {
                     options: {
                         presets: ['@babel/preset-env']
                     }
+                }
+            },
+            {
+                test: /\.vue$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "vue-loader",
+                    options: {
+                        hotReload: true
+                    },
                 }
             },
             {
@@ -48,15 +58,6 @@ module.exports = {
                     'postcss-loader'
                 ],
             },
-            {
-                test: /\.vue$/,
-                use: {
-                    loader: "vue-loader",
-                    options: {
-                        hotReload: true
-                    },
-                }
-            },
             // 内置静态资源构建能力 —— Asset Modules
             {
                 test: /\.(png|jpg|svg|gif)$/,
@@ -75,6 +76,8 @@ module.exports = {
                 },
             }
         ],
+        // 不对其进行webpack解析依赖和构建，包的体积不会减少，但打包速度会提升
+        noParse: /lodash/,
     },
     plugins: [
         new ESLintPlugin({
@@ -83,7 +86,7 @@ module.exports = {
         new VueLoaderPlugin(),
         new HTMLWebpackPlugin({
             template: 'public/index.html',
-            filename: 'index.html'
+            filename: 'index.html',
         }),
         // 进度条显示打包编译
         new webpack.ProgressPlugin({
@@ -99,16 +102,22 @@ module.exports = {
             dependencies: true,
             dependenciesCount: 10000,
             percentBy: null,
-        })
-          
+        }),
+        // 避免引入无用的模块,让加载的第三方库体积变小
+        // new webpack.IgnorePlugin({
+        //     checkResource(resource) {
+        //       // do something with resource
+        //     //   return true | false;
+        //     },
+        // }),
     ],
     resolve: {
         alias: {
             'vue$': 'vue/dist/vue.esm.js'
         },
         extensions: ['*', '.js', '.ts', '.vue', '.json'],
-	// 项目不含npm link，减小解析工作量
-	symlinks: false
+        // 项目不含npm link，减小解析工作量
+        symlinks: false
     },
 };
 

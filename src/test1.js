@@ -1,3 +1,6 @@
-export function sayHi() {
-    console.log('age');
+function sayHi() {
+    console.log('ages');
 }
+export {
+    sayHi,
+};

@@ -1,6 +1,7 @@
 <template>
     <div class="root">
         21
+        <test-component />
     </div>
 </template>
 
@@ -8,6 +9,9 @@
 import axios from 'axios';
 export default {
     name: 'demoRoot',
+    components: {
+        testComponent: () => import('./components/testComponent/index.vue'),
+    },
     data() {
         return {
 
