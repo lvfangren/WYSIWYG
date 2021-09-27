@@ -12,6 +12,7 @@ module.exports = {
         //   "js": "babel-eslint",
         //   "ts": "@typescript-eslint/parser",
         // },
+        // parser: '@typescript-eslint/parser',
         parser: 'babel-eslint',
         ecmaVersion: 2018,
         sourceType: 'module',
@@ -29,11 +30,11 @@ module.exports = {
         'vue',
     ],
     rules: {
+        'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+        'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         'no-void': 'off',
         // allow async-await
         'generator-star-spacing': 'off',
-        // allow debugger during development
-        'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
         // 要求或禁止函数圆括号之前有一个空格
         'space-before-function-paren': 0,
         // 在回调中需要错误处理
