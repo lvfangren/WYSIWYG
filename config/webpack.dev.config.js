@@ -4,15 +4,19 @@ const { merge } = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.base.config');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
-const smp = new SpeedMeasurePlugin();
+// const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+// const smp = new SpeedMeasurePlugin();
 
 const webpackConfigs = merge(baseWebpackConfig, {
     mode: 'development',
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: '[name].[chunkhash].js'
+        // 开发环境不使用hash，增加构建速度
+        filename: '[name].bundle.js',
+        // 清除当前打包
+        clean: true,
     },
+    // 开启开发，测试环境浏览器source map调试
     devtool: 'eval',
     devServer: {
         host: '0.0.0.0',
