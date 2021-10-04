@@ -1,64 +1,88 @@
 # WYSIWYG
 
-基于webpack5 + vue2X + ts的项目模版
-
-解决项目配置问题，相对于vite或者其它一些脚手架工具，这解决了生产环境配置，跨域接口请求，CI/CD配置等问题（当然，前提是你的项目需要像我一样[配置生产环境](#关于生产环境配置)相关），这让你可以更加集中精力的完成项目的页面开发，当完成开发后可以很快的部署，让所有人看到成果，而不是只能运行在你的本地服务下。
-
-有些时候会对一些集成度高的工具产生些排斥，有些时候它反会让人觉得难以下手。
-
-## 为什么使用这个项目模版
-
-配置了CI/CD
-
-不需要你关心生产和开发环境的配置
-
-解决了潜在的项目优化问题（打包，编译，加载）
-
-处理了跨域问题（可以参见完整的demo）
-
-规范了一个前端项目的工作流，从开发到部署上线
-
-## 使用
-当这个项目模版clone下来后
-
-* npm install
-
-* npm run dev
-
-它运行了一个基本的例子，但是不像vue-cli等工具，这没有组织你项目的目录结构，例如：你可以把你的图片文件夹命名成AAA都是可以的，但是注意不要修改已经指定的文件目录，这个很重要！
+<p align="center">
+  <span> English | </span> 
+  <a href="README.md" rel="nofollow">简体中文</a>
+</p>
 
 
-## 关于生产环境配置
+Project template based on webpack5 + vue2X + ts
 
-阿里云服务器准备
+Solve project configuration problems. Compared with vite or some other scaffolding tools, this solves the problems of production environment configuration, cross-domain interface request, CI/CD configuration, etc. (Of course, the premise is that your project needs to be like me [configure production environment](./doc/use-en.md) related), which allows you to concentrate more on completing the project's page development. When the development is completed, you can quickly deploy, so that everyone can see the results, instead of only running on your local service Down.
 
+Sometimes it will reject some highly integrated tools, and sometimes it will make people find it difficult to start.
 
-## 案例支持
+## How to Use
+
+[use](./doc/use-en.md)
+## why use
+
+CI/CD configured
+
+No need to care about the configuration of the production and development environment
+
+Solved potential project optimization problems (packaging, compiling, loading)
+
+Handled cross-domain issues (see the full demo)
+
+Complete the workflow of a front-end project, from development to deployment
+
+......
+## expect
+
+deving: 
+
+	* Automation requirement specification, cooperation specification (product PRD, front-end and back-end agreement, self-test use case development)
+	* Environment setup
+	* Team development specification
+	* Automated deployment, testing
+
+testing：
+
+	* R & D quality, standard control
+	* Test data problem
+
+releaseing：
+
+	* Online monitoring of the market (performance, online alarm)
+	* Message robot (deployed to the designated specific branch to notify the corresponding platform robot, which has been tested or released online)
+	* Buried point related (strictly distinguish between problem monitoring and product-related data monitoring)
+	* Publish method (publish questions online at any time)
+
+Products have the right to strictly require R&D output to meet expectations, and R&D has the right to require product requirements to be reasonable and meaningful. Tests must understand that they are goalkeepers and whistleblowers.
+
+Let the business surface, reduce garbage time, truly improve development efficiency, truly do things that are valuable to users, and do things that are valuable to projects.
+
+Create the future, create in the future! ! !
+## user list
 
 * [XXX](baidu.com)
 
-如果您的项目使用了这个项目模版完成，可以在issue或者pr提出，希望得到您的支持！
+If your project is completed using this project template, you can submit it in issue or pr, and hope to get your support!
 
-## 其它
+## Changelog
+[Recent update 2021.10.04](CHANGELOG.md)
 
-考虑到灵活度,没有配套安装vue-router等相关全家桶，我认为那是和你开发的项目需求有关，属于业务层面的需要，所以你可以自行配套安装使用。
+## other
 
-关于vue3版本的需求，建议clone这个项目模版后可以使用[@vue/compat](https://v3.vuejs.org/guide/migration/migration-build.html#overview)完成项目vue3的支持
+There is no supporting installation of css precompilation, tool functions, vue-router and other libraries, which belong to the needs of the business level and can be installed and used by themselves.
 
-本意是希望所见即所得
+The original intention is to hope that what you see is what you get!
 
-## 参考
+## refer to
 
-[webpack文档](https://www.webpackjs.com/guides/)
+[webpack](https://www.webpackjs.com/guides/)
 
-[vue-loader文档](https://vue-loader.vuejs.org/)
+[vue-loader](https://vue-loader.vuejs.org/)
 
-[eslint文档](https://eslint.org/docs/user-guide/configuring/configuration-files#extending-configuration-files)
+[eslint](https://eslint.org/docs/user-guide/configuring/configuration-files#extending-configuration-files)
 
-[API接口](https://www.v2ex.com/p/7v9TEc53)
+[API](https://www.v2ex.com/p/7v9TEc53)
 
-[github action 文档](https://docs.github.com/cn/actions)
+[github action](https://docs.github.com/cn/actions)
 
-### License
+[Webpack5 新特性业务落地实战](https://zhuanlan.zhihu.com/p/348612482)
+
+## License
 
 MIT
