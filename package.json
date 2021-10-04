@@ -1,6 +1,6 @@
 {
   "name": "WYSIWYG",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "main": "private",
   "scripts": {
     "dev": "webpack server --config config/webpack.dev.config.js",
