@@ -46,8 +46,16 @@ jobs:
           node-version: '14'
           cache: 'npm'
       - run: |
-          npm install
+          npm ci
           npm run genlog
           npm run lint
-          
+          npm run build
+
+      # 自动发布GitHubpage
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with: 
+          branch: main
+          folder: dist
+
      
