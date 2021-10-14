@@ -9,10 +9,12 @@ console.log(Test);
 Vue.prototype.$http = httpAxios;
 
 const $appVueInstance = new Vue({
-    components: {
-        App,
-    },
-    template: '<App/>',
+    // components: {
+    //     App,
+    // },
+    // template: '<App/>',
+    el: '#app',
+    render: h => h(App),
 });
 
 window.onload = () => {
