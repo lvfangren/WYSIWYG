@@ -28,32 +28,6 @@ Handled cross-domain issues (see the full demo)
 Complete the workflow of a front-end project, from development to deployment
 
 ......
-## expect
-
-deving: 
-
-	* Automation requirement specification, cooperation specification (product PRD, front-end and back-end agreement, self-test use case development)
-	* Environment setup
-	* Team development specification
-	* Automated deployment, testing
-
-testing：
-
-	* R & D quality, standard control
-	* Test data problem
-
-releaseing：
-
-	* Online monitoring of the market (performance, online alarm)
-	* Message robot (deployed to the designated specific branch to notify the corresponding platform robot, which has been tested or released online)
-	* Buried point related (strictly distinguish between problem monitoring and product-related data monitoring)
-	* Publish method (publish questions online at any time)
-
-Products have the right to strictly require R&D output to meet expectations, and R&D has the right to require product requirements to be reasonable and meaningful. Tests must understand that they are goalkeepers and whistleblowers.
-
-Let the business surface, reduce garbage time, truly improve development efficiency, truly do things that are valuable to users, and do things that are valuable to projects.
-
-Create the future, create in the future! ! !
 ## user list
 
 * [XXX](baidu.com)
@@ -83,6 +57,9 @@ The original intention is to hope that what you see is what you get!
 
 [Webpack5 新特性业务落地实战](https://zhuanlan.zhihu.com/p/348612482)
 
+## expect
+
+Through this template expansion, a series of front-end related infrastructures are integrated (for example: monitoring the market, automated notification, testing, etc.); a well-defined R&D workflow.
 ## License
 
 MIT
