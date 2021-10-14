@@ -8,13 +8,13 @@
 
 Project template based on webpack5 + vue2X + ts
 
-Solve project configuration problems. Compared with vite or some other scaffolding tools, this solves the problems of production environment configuration, cross-domain interface request, CI/CD configuration, etc. (Of course, the premise is that your project needs to be like me [configure production environment](./doc/use-en.md) related), which allows you to concentrate more on completing the project's page development. When the development is completed, you can quickly deploy, so that everyone can see the results, instead of only running on your local service Down.
+Solve project configuration problems. Compared with vite or some other scaffolding tools, this solves the problems of production environment configuration, cross-domain interface request, CI/CD configuration, etc. (Of course, the premise is that your project needs to be like me [configure production environment](./docs/use-en.md) related), which allows you to concentrate more on completing the project's page development. When the development is completed, you can quickly deploy, so that everyone can see the results, instead of only running on your local service Down.
 
 Sometimes it will reject some highly integrated tools, and sometimes it will make people find it difficult to start.
 
 ## How to Use
 
-[use](./doc/use-en.md)
+[use](./docs/use-en.md)
 ## why use
 
 CI/CD configured
