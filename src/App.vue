@@ -1,7 +1,4 @@
 <template>
-  <!-- 测试图片
-    <img src="./images/keynote-en.png" alt=""> -->
-  <!-- 语义化 -->
   <div id="demo-page">
     <header>
       header
@@ -46,7 +43,6 @@ export default {
 </script>
 
 <style>
-@import url("./css/test2.css");
 #demo-page {
   width: 100%;
   height: 100%;
