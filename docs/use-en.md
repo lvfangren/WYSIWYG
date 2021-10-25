@@ -5,7 +5,7 @@
 git clone git@github.com:lvfangren/WYSIWYG.git 
 || git clone https://github.com/lvfangren/WYSIWYG.git
 || gh repo clone lvfangren/WYSIWYG (u need read github ci)
-
+|| npx degit git@github.com:lvfangren/WYSIWYG.git#main u-project-name
 ```
 - config git
 ```bash

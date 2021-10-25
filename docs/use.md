@@ -5,6 +5,7 @@
 git clone git@github.com:lvfangren/WYSIWYG.git 
 或 git clone https://github.com/lvfangren/WYSIWYG.git
 或 gh repo clone lvfangren/WYSIWYG (u need read github ci)
+或者 npx degit git@github.com:lvfangren/WYSIWYG.git#main u-project-name
 
 ```
 - 设置为个人的仓库地址
