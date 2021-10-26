@@ -21,6 +21,7 @@
 </template>
 
 <script lang="ts">
+import { login } from '../axios/a';
 export default {
     data() {
         return {
@@ -30,11 +31,20 @@ export default {
     },
     created() {
         // @ts-ignore
-        this.$http.get('api/members/show.json?id=21').then((res: any) => {
-            console.log(res, 'rerere');
-        });
+        // this.$http.get('api/entries', {
+        //     params: { category: 'science' },
+        // }).then((res: any) => {
+        //     console.log(res, 'rerere');
+        // });
+        this.xx();
     },
     methods: {
+        async xx() {
+            const x = await login({
+                category: 'science',
+            });
+            console.log(x, 'xxxx');
+        },
         cc(a: string) {
             return 'cs';
         },

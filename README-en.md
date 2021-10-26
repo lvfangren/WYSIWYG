@@ -51,7 +51,7 @@ The original intention is to hope that what you see is what you get!
 
 [eslint](https://eslint.org/docs/user-guide/configuring/configuration-files#extending-configuration-files)
 
-[API](https://www.v2ex.com/p/7v9TEc53)
+[API](https://github.com/davemachado/public-api)
 
 [github action](https://docs.github.com/cn/actions)
 
