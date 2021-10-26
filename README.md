@@ -55,7 +55,7 @@
 
 [eslint文档](https://eslint.org/docs/user-guide/configuring/configuration-files#extending-configuration-files)
 
-[API接口](https://www.v2ex.com/p/7v9TEc53)
+[API接口](https://github.com/davemachado/public-api)
 
 [github action 文档](https://docs.github.com/cn/actions)
 

@@ -30,7 +30,9 @@ export default {
     },
     created() {
         // @ts-ignore
-        this.$http.get('api/members/show.json?id=21').then((res: any) => {
+        this.$http.get('api/entries', {
+            params: { category: 'science' },
+        }).then((res: any) => {
             console.log(res, 'rerere');
         });
     },
