@@ -9,8 +9,8 @@ module.exports = {
     parser: 'vue-eslint-parser',
     parserOptions: {
         // parser: {
-        //   "js": "babel-eslint",
-        //   "ts": "@typescript-eslint/parser",
+        //     js: 'babel-eslint',
+        //     ts: '@typescript-eslint/parser',
         // },
         // parser: '@typescript-eslint/parser',
         parser: 'babel-eslint',
