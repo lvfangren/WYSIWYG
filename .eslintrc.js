@@ -8,10 +8,16 @@ module.exports = {
     },
     parser: 'vue-eslint-parser',
     parserOptions: {
+        // 利用vue-eslint-parser提供自定义不同类型的script如何解析
         // parser: {
-        //   "js": "babel-eslint",
-        //   "ts": "@typescript-eslint/parser",
+        //     js: 'espree',
+        //     ts: '@typescript-eslint/parser',
         // },
+        vueFeatures: {
+            filter: true,
+            interpolationAsNonHTML: true,
+            styleCSSVariableInjection: true,
+        },
         // parser: '@typescript-eslint/parser',
         parser: 'babel-eslint',
         ecmaVersion: 2018,
@@ -28,6 +34,7 @@ module.exports = {
     },
     plugins: [
         'vue',
+        // 'plugin:@typescript-eslint/recommended',
     ],
     rules: {
         'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
@@ -63,6 +70,18 @@ module.exports = {
         'no-unused-vars': process.env.NODE_ENV === 'production' ? 'error' : 'off',
         // 缩进为四空格
         indent: ['error', 4],
-        quotes: [2, 'single', { avoidEscape: true, allowTemplateLiterals: true }],
+        quotes: [2, 'single', {
+            avoidEscape: true,
+            allowTemplateLiterals: true,
+        }],
     },
+    overrides: [{
+        files: [
+            '**/__tests__/*.{j,t}s?(x)',
+            '**/tests/unit/**/*.spec.{j,t}s?(x)',
+        ],
+        env: {
+            jest: true,
+        },
+    }],
 };

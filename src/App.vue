@@ -43,6 +43,9 @@ export default {
             const x = await login({
                 category: 'science',
             });
+            const y = await login({
+                category: 'xx',
+            });
             console.log(x, 'xxxx');
         },
         cc(a: string) {
