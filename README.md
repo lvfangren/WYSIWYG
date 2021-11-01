@@ -6,10 +6,19 @@
 </p>
 
 基于webpack5 + vue2X + ts的项目模版
+## collapsible markdown?
+
+<details>
+<summary>CLICK ME</summary>
+
+<summary>不需要看什么文档，clone下来它即是项目即是存在，当然如果你有一些特殊配置（例如：eslint）还是得去查看eslint的文档（如果不熟悉的话），脚手架又没用帮项目生成生产环境的配置及一些常用的配置（跨域配置），任何一个部分都需要自行去查阅资料整合（利用GitHub action做CI/CD等。所以所见即所得。
+</details>
+
+
 
 针对个人开发，或者校园开发团队，期待使用。
 
-解决项目配置问题，相对于一些脚手架工具，这解决了生产环境配置，跨域接口请求，CI/CD配置等问题（当然，前提是像这样[配置生产环境相关](./docs/use.md)），这开发者可以集中精力的完成项目的开发，当完成开发后自动化部署，让所有人看到成果，而不是只能运行在本地服务下。
+解决项目配置问题，相对于一些脚手架工具，这解决了生产环境配置，跨域接口请求，CI/CD配置等问题（当然，前提是像这样[配置生产环境相关](./docs/use.md)），这让开发者可以集中精力的完成项目的开发，当完成开发后自动化部署，让所有人看到成果，而不是只能运行在本地服务下。
 
 有些时候会对一些集成度高的工具产生些排斥，有些时候它反会让人觉得难以下手。
 
@@ -63,7 +72,9 @@
 
 ## 未来
 
-通过此模版扩展，集成一系列前端相关基建（例如：监控大盘，自动化通知，测试等）；定义完善的研发工作流。
+通过此模版扩展，前端工程体系集成（例如：监控大盘，自动化通知，测试等）；定义完善的研发工作流。
 ## License
 
 MIT
+
+[![Page Views Count](https://badges.toozhao.com/badges/01FKDN8FD225HYB35EYMWF2531/green.svg)](https://badges.toozhao.com/stats/01FKDN8FD225HYB35EYMWF2531 "Get your own page views count badge on badges.toozhao.com")
