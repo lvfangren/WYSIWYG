@@ -3,7 +3,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const webpack = require('webpack');
-console.log(webpack, 'ssss');
+console.log(webpack, 'ssss', process.env);
 module.exports = {
     entry: "./src/main.ts",
     // 替代了原来的cache-loader和dll插件
@@ -102,6 +102,12 @@ module.exports = {
             dependencies: true,
             dependenciesCount: 10000,
             percentBy: null,
+        }),
+        // 定义环境和变量
+        new webpack.DefinePlugin({ 
+            'process.env': {
+                'names': 1
+            }
         }),
         // 避免引入无用的模块,让加载的第三方库体积变小
         // new webpack.IgnorePlugin({
