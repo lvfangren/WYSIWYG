@@ -23,6 +23,10 @@ Sometimes it will reject some highly integrated tools, and sometimes it will mak
 [use](./docs/use-en.md)
 ## why use
 
+Simple to use
+
+No extra npm packages and presets
+
 CI/CD configured
 
 No need to care about the configuration of the production and development environment
