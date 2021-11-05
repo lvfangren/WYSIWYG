@@ -8,12 +8,12 @@ module.exports = {
     },
     parser: 'vue-eslint-parser',
     parserOptions: {
-        // parser: {
-        //     js: 'babel-eslint',
-        //     ts: '@typescript-eslint/parser',
-        // },
+        parser: {
+            js: 'babel-eslint',
+            ts: '@typescript-eslint/parser',
+        },
         // parser: '@typescript-eslint/parser',
-        parser: 'babel-eslint',
+        // parser: 'babel-eslint',
         ecmaVersion: 2018,
         sourceType: 'module',
         allowImportExportEverywhere: false,

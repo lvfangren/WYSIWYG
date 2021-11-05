@@ -24,6 +24,7 @@ axios.interceptors.response.use(function (response) {
 
 const httpAxios = axios.create({
     timeout: 5000,
+    baseURL: process.env.NODE_ENV === 'development' ? 'api/' : 'https://api.publicapis.org/',
 });
 
 export default httpAxios;

@@ -30,7 +30,7 @@ export default {
     },
     created() {
         // @ts-ignore
-        this.$http.get('api/entries', {
+        this.$http.get('/entries', {
             params: { category: 'science' },
         }).then((res: any) => {
             console.log(res, 'rerere');
