@@ -2,6 +2,7 @@
   <div id="demo-page">
     <header>
       header
+      <!-- <img src="./images/favicon2.png" alt=""> -->
     </header>
     <div class="content">
       <main>

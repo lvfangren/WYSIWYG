@@ -7,7 +7,6 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 // const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 // const smp = new SpeedMeasurePlugin();
 console.log('环境变量：', process.env.NODE_ENV);
-
 const webpackConfigs = merge(baseWebpackConfig, {
     mode: 'development',
     output: {
@@ -35,10 +34,11 @@ const webpackConfigs = merge(baseWebpackConfig, {
         },
     },
     plugins: [
-        new HTMLWebpackPlugin({
-            template: './public/index.html',
-            filename: './index.html'
-        }),
+        // new HTMLWebpackPlugin({
+        //     template: '../public/index.html',
+        //     filename: '../index.html',
+        //     favicon: '../public/favicon2.png'
+        // }),
         // new BundleAnalyzerPlugin(),
     ],
 });

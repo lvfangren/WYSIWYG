@@ -3,8 +3,11 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const webpack = require('webpack');
+const path = require('path');
 console.log(webpack, 'ssss', process.env);
 module.exports = {
+    // stats 选项让你更精确地控制 bundle 信息该怎么显示。
+    stats: "errors-only",
     entry: "./src/main.ts",
     // 替代了原来的cache-loader和dll插件
     cache: {
@@ -85,8 +88,9 @@ module.exports = {
         }),
         new VueLoaderPlugin(),
         new HTMLWebpackPlugin({
-            template: 'public/index.html',
+            template: path.resolve(__dirname, '../public/index.html'),
             filename: 'index.html',
+            favicon: path.resolve(__dirname, '../public/favicon2.png')
         }),
         // 进度条显示打包编译
         new webpack.ProgressPlugin({
