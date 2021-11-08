@@ -7,7 +7,7 @@ const path = require('path');
 console.log(webpack, 'ssss', process.env);
 module.exports = {
     // stats 选项让你更精确地控制 bundle 信息该怎么显示。
-    stats: "errors-only",
+    // stats: "errors-only",
     entry: "./src/main.ts",
     // 替代了原来的cache-loader和dll插件
     cache: {

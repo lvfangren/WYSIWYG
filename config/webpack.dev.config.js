@@ -2,7 +2,6 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.base.config');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 // const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 // const smp = new SpeedMeasurePlugin();
@@ -34,11 +33,6 @@ const webpackConfigs = merge(baseWebpackConfig, {
         },
     },
     plugins: [
-        // new HTMLWebpackPlugin({
-        //     template: '../public/index.html',
-        //     filename: '../index.html',
-        //     favicon: '../public/favicon2.png'
-        // }),
         // new BundleAnalyzerPlugin(),
     ],
 });
