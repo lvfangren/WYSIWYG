@@ -7,9 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="./favicon2.png">
     <title>WYSIWYG</title>
+    <style>
+        /* 开启UI测试 */
+        html * {
+            outline: 1px solid blue;
+        }
+        [v-cloak] {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <div id="app">
+    <div id="app" v-clock>
     </div>
 </body>
 </html>
