@@ -5,7 +5,7 @@ const baseWebpackConfig = require('./webpack.base.config');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 // const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
 // const smp = new SpeedMeasurePlugin();
-console.log('环境变量：', process.env.NODE_ENV);
+console.log(`%c 环境变量：${process.env.NODE_ENV}`, 'background: skyblue;');
 const webpackConfigs = merge(baseWebpackConfig, {
     mode: 'development',
     output: {

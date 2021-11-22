@@ -1,4 +1,4 @@
-import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
+import axios from 'axios';
 
 // 添加请求拦截器
 axios.interceptors.request.use(function (config) {
@@ -21,10 +21,9 @@ axios.interceptors.response.use(function (response) {
     // 对响应错误做点什么
     return Promise.reject(error);
 });
-
 const httpAxios = axios.create({
     timeout: 5000,
-    baseURL: process.env.NODE_ENV === 'development' ? 'api/' : 'https://api.publicapis.org/',
+    baseURL: process.env.API_BASE,
 });
 
 export default httpAxios;

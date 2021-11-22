@@ -4,11 +4,12 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
-console.log(webpack, 'ssss', process.env);
+const Dotenv = require('dotenv-webpack');
+
 module.exports = {
     // stats 选项让你更精确地控制 bundle 信息该怎么显示。
     // stats: "errors-only",
-    entry: "./src/main.ts",
+    entry: './src/main.ts',
     // 替代了原来的cache-loader和dll插件
     cache: {
         type: 'filesystem',
@@ -26,7 +27,7 @@ module.exports = {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader",
+                    loader: 'babel-loader',
                     options: {
                         presets: ['@babel/preset-env']
                     }
@@ -36,7 +37,7 @@ module.exports = {
                 test: /\.vue$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "vue-loader",
+                    loader: 'vue-loader',
                     options: {
                         hotReload: true
                     },
@@ -107,12 +108,19 @@ module.exports = {
             dependenciesCount: 10000,
             percentBy: null,
         }),
-        // 定义环境和变量
-        new webpack.DefinePlugin({ 
-            'process.env': {
-                'names': 1
-            }
+        // 定义环境和变量(为啥要改成使用Dotenv，而不是DefinePlugin。可以参考： https://awdr74100.github.io/2020-06-29-webpack-dotenvwebpack/)
+        new Dotenv({
+          path: process.env.NODE_ENV === 'development'
+          ? path.resolve(__dirname, './env/.env.dev')
+          : path.resolve(__dirname, './env/.env.prod'),
+          systemvars: true,
+          allowEmptyValues: true,
         }),
+        // new webpack.DefinePlugin({ 
+        //     'process.env': {
+        //         'names': 1
+        //     }
+        // }),
         // 避免引入无用的模块,让加载的第三方库体积变小
         // new webpack.IgnorePlugin({
         //     checkResource(resource) {
