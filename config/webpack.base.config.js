@@ -5,7 +5,6 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
-
 module.exports = {
     // stats 选项让你更精确地控制 bundle 信息该怎么显示。
     // stats: "errors-only",
