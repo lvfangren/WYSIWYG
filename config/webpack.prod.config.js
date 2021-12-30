@@ -2,8 +2,7 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.base.config');
-// const { CleanWebpackPlugin } = require('clean-webpack-plugin'); 
-console.log(`%c 环境变量：${process.env.NODE_ENV}`, 'background: skyblue;');
+console.log(`%c环境变量: ${process.env.NODE_ENV}`, 'background: #87ceeb;');
 exports.default = merge(baseWebpackConfig, {
     mode: 'production',
     output: {
@@ -12,8 +11,4 @@ exports.default = merge(baseWebpackConfig, {
         // 清除当前打包
         clean: true,
     },
-    // devtool: 'source-map',
-    // plugins: [
-    //     new CleanWebpackPlugin(),
-    // ]
 })

@@ -98,7 +98,7 @@ module.exports = {
             entries: true,
             handler(percentage, message, ...args) {
               // custom logic
-              console.log('sssss',percentage,message,args);
+            //   console.log('打印进度',percentage,message,args);
             },
             modules: true,
             modulesCount: 5000,

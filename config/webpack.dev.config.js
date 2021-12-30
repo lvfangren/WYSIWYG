@@ -3,9 +3,7 @@ const path = require('path');
 const { merge } = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.base.config');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-// const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
-// const smp = new SpeedMeasurePlugin();
-console.log(`%c 环境变量：${process.env.NODE_ENV}`, 'background: skyblue;');
+console.log(`%c环境变量: ${process.env.NODE_ENV}`, 'background: #87ceeb;');
 const webpackConfigs = merge(baseWebpackConfig, {
     mode: 'development',
     output: {
@@ -36,7 +34,4 @@ const webpackConfigs = merge(baseWebpackConfig, {
         // new BundleAnalyzerPlugin(),
     ],
 });
-
-// smp存在会导致报VueLoaderPlugin不存在相关配置的错误
-// exports.default = smp.wrap(webpackConfigs);
 exports.default = webpackConfigs;
