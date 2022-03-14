@@ -1,6 +1,8 @@
 <template>
   <div id="demo-page">
-    <header>
+    <hello></hello>
+    <test-component></test-component>
+    <!-- <header>
       header
     </header>
     <div class="content">
@@ -16,7 +18,7 @@
     </div>
     <footer>
       footer
-    </footer>
+    </footer> -->
   </div>
 </template>
 

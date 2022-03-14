@@ -6,3 +6,4 @@
 /src/images/
 /src/font/
 shims-vue.d.ts
+components.d.ts

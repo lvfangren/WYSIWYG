@@ -127,6 +127,9 @@ module.exports = {
         //     //   return true | false;
         //     },
         // }),
+        require('unplugin-vue-components/webpack')(
+            // 自定义配置参考配置文档：https://www.npmjs.com/package/unplugin-vue-components
+        ),
     ],
     resolve: {
         alias: {

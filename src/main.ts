@@ -12,7 +12,8 @@ const $appVueInstance = new Vue({
     },
     template: '<App/>',
 });
-
+localStorage.setItem('name', '1');
+sessionStorage.setItem('age', '21');
 window.onload = () => {
     $appVueInstance.$mount('#app');
 };
