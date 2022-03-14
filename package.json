@@ -9,7 +9,8 @@
     "lint:fix": "eslint --fix src/App.vue",
     "prepare": "husky install",
     "commit": "git-cz",
-    "genlog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "genlog": "conventional-changelog -p angular -i CHANGELOG.md -s && node xx.js",
+    "testCustom": "node xx.js"
   },
   "keywords": [],
   "author": "lvfangren",
@@ -78,7 +79,8 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E $HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run lint:fix"
+      "pre-commit": "npm run lint:fix",
+      "test-custom": "npm run "
     }
   },
   "lint-staged": {
