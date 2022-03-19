@@ -1,5 +1,5 @@
 'use strict';
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const { VueLoaderPlugin } = require('vue-loader/dist/index')
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const webpack = require('webpack');
@@ -133,7 +133,8 @@ module.exports = {
     ],
     resolve: {
         alias: {
-            'vue$': 'vue/dist/vue.esm.js'
+            // 'vue$': 'vue',
+            "@": path.join(__dirname, './src')
         },
         extensions: ['*', '.js', '.ts', '.vue', '.json'],
         // 项目不含npm link，减小解析工作量

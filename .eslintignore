@@ -7,3 +7,4 @@
 /src/font/
 shims-vue.d.ts
 components.d.ts
+env.d.ts

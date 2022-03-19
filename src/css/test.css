@@ -1,11 +1,3 @@
-@font-face {
-    font-family: 'Test font';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../font/MaterialIcons-Regular.eot');
-    /* For IE6-8 */
-    src: url(../font/MaterialIcons-Regular.woff2) format('woff2'), url(../font/MaterialIcons-Regular.woff) format('woff'), url(../font/MaterialIcons-Regular.ttf) format('truetype');
-}
 body {
     font-family: 'Test font';
     font-size: 100px;
@@ -13,4 +5,7 @@ body {
     padding: 0px;
     width: 100vw;
     height: 100vh;
+}
+.debugger-class {
+    outline: solid greenyellow;
 }

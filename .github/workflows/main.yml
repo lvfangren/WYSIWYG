@@ -47,7 +47,6 @@ jobs:
           cache: 'npm'
       - run: |
           npm ci
-          npm run genlog
           npm run lint
           npm run build
 
