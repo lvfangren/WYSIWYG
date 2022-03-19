@@ -17,7 +17,7 @@
   "license": "MIT",
   "description": "",
   "dependencies": {
-    "axios": "0.21.1",
+    "axios": "^0.26.1",
     "normalize.css": "8.0.1",
     "precss": "4.0.0",
     "vue": "^3.2.25"
