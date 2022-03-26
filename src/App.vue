@@ -1,9 +1,21 @@
-<script setup lang="ts">
+<script lang="ts">
+// import { onMounted } from 'vue';
+// onMounted(() => {
+//     // eslint-disable-next-line
+//     $lfr();
+//     console.log('object');
+// });
+export default {
+    mounted() {
+        // this.$lfr('cascas');
+    },
+};
 </script>
 
 <template>
   <div id="demo-page">
-    <hello/>
+    <!-- <hello/> -->
+    <test-tab/>
   </div>
 </template>
 
