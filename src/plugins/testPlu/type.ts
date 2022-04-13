@@ -1,6 +1,7 @@
-interface InBaseOptions {
+export interface InBaseOptions {
     isKeepStatus?: boolean,
+    testText?: string
 };
-interface InStyleOptions {
+export interface InStyleOptions {
     width?: number | string
 };

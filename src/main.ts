@@ -1,6 +1,8 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import './css/normalize.less';
+import './css/var.less';
+import './css/base.less';
 import TestPlugin from './plugins/testPlu/main';
 // import { httpAxios } from './share/index';
 

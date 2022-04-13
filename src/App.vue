@@ -14,8 +14,8 @@ export default {
 
 <template>
   <div id="demo-page">
-    <!-- <hello/> -->
-    <test-tab/>
+    <hello/>
+    <!-- <test-tab/> -->
   </div>
 </template>
 
