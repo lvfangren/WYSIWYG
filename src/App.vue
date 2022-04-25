@@ -5,8 +5,10 @@
 //     $lfr();
 //     console.log('object');
 // });
+
 export default {
     mounted() {
+        document!.getElementById('loading-page')!.style.display = 'none';
         // this.$lfr('cascas');
     },
 };
@@ -14,7 +16,9 @@ export default {
 
 <template>
   <div id="demo-page">
-    <hello/>
+    <blibli/>
+    <!-- vue3短信验证码弹窗组件抽离 -->
+    <!-- <hello/> -->
     <!-- <test-tab/> -->
   </div>
 </template>

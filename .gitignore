@@ -3,7 +3,6 @@
 
 # dist 发布目录
 /dist
-/dist-ssr
 
 
 # 抹平系统差异文件
