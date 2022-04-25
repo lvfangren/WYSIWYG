@@ -16,9 +16,8 @@ export default {
 
 <template>
   <div id="demo-page">
-    <blibli/>
     <!-- vue3短信验证码弹窗组件抽离 -->
-    <!-- <hello/> -->
+    <hello/>
     <!-- <test-tab/> -->
   </div>
 </template>
