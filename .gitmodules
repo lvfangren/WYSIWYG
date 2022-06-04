@@ -1,0 +1,3 @@
+[submodule "src/component-common/Gun"]
+	path = src/component-common/Gun
+	url = git@github.com:lvfangren/Gun.git

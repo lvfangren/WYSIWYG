@@ -15,4 +15,9 @@ import TestPlugin from './plugins/testPlu/main';
 // }
 
 // createApp(App).mount('#app');
+// 开发时测试mock用
+if (process.env.isMock) {
+    const x = import('./mock/index');
+    console.log(x, 'xxx');
+}
 createApp(App).use(TestPlugin).mount('#app');

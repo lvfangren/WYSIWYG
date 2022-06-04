@@ -6,6 +6,12 @@ import visualizer from 'rollup-plugin-visualizer';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+    define: {
+        'process.env': {
+            isMock: true,
+        },
+    },
+    // root: './public',
     plugins: [vue(), visualizer({
         open: true,
     }), Components({

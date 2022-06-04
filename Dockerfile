@@ -6,5 +6,5 @@ WORKDIR /usr/share/nginx/html
 COPY dist /usr/share/nginx/html
 
 
-EXPOSE 80
+EXPOSE 8080
 ENTRYPOINT ["nginx", "-g", "daemon off;"]

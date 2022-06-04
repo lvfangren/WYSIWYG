@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "private",
   "scripts": {
+    "updates:component": "git submodule update --remote",
     "dev": "vite",
     "preview": "vite preview",
     "build:oldSchool": "NODE_ENV=production webpack --config config/webpack.prod.config.js",
@@ -64,12 +65,7 @@
     "vite": "^2.8.0",
     "vue-eslint-parser": "^7.9.0",
     "vue-loader": "^17.0.0",
-    "vue-tsc": "^0.33.5",
-    "webpack": "^5.44.0",
-    "webpack-bundle-analyzer": "^4.4.2",
-    "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2",
-    "webpack-merge": "^5.8.0"
+    "vue-tsc": "^0.33.5"
   },
   "engines": {
     "node": ">= 12.13.0",
