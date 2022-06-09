@@ -10,6 +10,8 @@ export default {
     mounted() {
         document!.getElementById('loading-page')!.style.display = 'none';
         // this.$lfr('cascas');
+        // 使用当前设置的环境变量
+        console.log(import.meta.env);
     },
 };
 </script>

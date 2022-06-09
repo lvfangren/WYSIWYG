@@ -16,7 +16,7 @@ import TestPlugin from './plugins/testPlu/main';
 
 // createApp(App).mount('#app');
 // 开发时测试mock用
-if (process.env.isMock) {
+if (import.meta.env?.VITE_IS_MOCK === 'true') {
     const x = import('./mock/index');
     console.log(x, 'xxx');
 }

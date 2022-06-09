@@ -2,7 +2,6 @@
 const purgecss = require('@fullhuman/postcss-purgecss');
 module.exports = {
     plugins: [
-        require('precss'),
         require('autoprefixer'),
         // 增加去除无用的css样式的插件，purgecss
         purgecss({
