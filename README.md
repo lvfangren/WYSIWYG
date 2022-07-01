@@ -1,16 +1,6 @@
 # WYSIWYG
 
-<p align="center">
-  <span> 简体中文 | </span> 
-  <a href="README-en.md" rel="nofollow">English</a>
-</p>
-
-vue项目模版仓库
-
-## 简介
-
-此模版没有任何预设，只是提供一个最小的运行页面。
- 
+I don`t know what this is. first do it
 
 ## 使用
 
@@ -31,9 +21,10 @@ npm run dev
 
 ```
 
-## 案例支持
+## need help
 
-如果您的项目使用了这个项目模版完成，可以在issue或者pr提出，希望得到您的支持！
+help report me what is this!?
+
 ## License
 
 [MIT](./LICENSE)
