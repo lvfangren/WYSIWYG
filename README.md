@@ -15,7 +15,8 @@ cd u-project-name
 git init
 git remote set-url origin XXX(u self repositories)
 
-npm install
+# support use pnpm
+pnpm install
 
 npm run dev
 
